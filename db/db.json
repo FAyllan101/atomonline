@@ -1,0 +1,68 @@
+{
+    "Activities": {
+      "colaboradores": [
+        {
+          "id": 1,
+          "tipo": "Italiano Branco"
+        },
+        {
+          "id": 2,
+          "tipo": "3 Queijos"
+        },
+        {
+          "id": 3,
+          "tipo": "Parmesão e Orégano"
+        },
+        {
+          "id": 4,
+          "tipo": "Integral"
+        }
+      ],
+      "tipos": [
+        {
+          "id": 1,
+          "tipo": "Temporária"
+        },
+        {
+          "id": 2,
+          "tipo": "Fixa"
+        }
+      ],
+      "prioridades": [
+        {
+          "id": 1,
+          "tipo": "Nível 1"
+        },
+        {
+          "id": 2,
+          "tipo": "Nível 2"
+        },
+        {
+          "id": 3,
+          "tipo": "Nível 3"
+        },
+        {
+          "id": 4,
+          "tipo": "Nível 4"
+        }
+      ]
+    },
+    "status": [
+      {
+        "id": 1,
+        "tipo": "Em Aberto"
+      },
+      {
+        "id": 2,
+        "tipo": "Fazendo"
+      },
+      {
+        "id": 3,
+        "tipo": "Finalizado"
+      },
+      {
+        "id": 4,
+        "tipo": "Atrasadas"
+      }
+    ]
+  }
