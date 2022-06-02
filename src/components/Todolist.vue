@@ -34,13 +34,12 @@
       </form>
       <!-- deixar na mesma linha -->
       <div class="tarefa list">
-        <atividade
-          v-for="a in atividades"
-          :key="a.id"
-          @toggle="toggleAtividade" 
-          @remove="removeAtividade"
-          :atividade="a"
-        ></atividade>
+        <atividade v-for="a 
+        in atividades" 
+        :key="a.id" 
+        @toggle="toggleAtividade" 
+        @remove="removeAtividade"
+        :atividade="a"> </atividade>
         <!--  -->
       </div>
     </div>
@@ -87,7 +86,7 @@ export default {
 
     }
   },
-};
+}
 </script>
 
 <style scoped>
