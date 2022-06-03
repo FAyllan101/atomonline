@@ -1,35 +1,85 @@
 <template>
-  <div calss="boards">
-    <h3>atividade</h3>
-    <div class="pendente">
-      <h3>Pendente</h3>
-      <div class="card">
-        <div class="atividade">atividade</div>
-        <div class="content" contenteditable="true">123</div>
-        <div class="img" img src="">001</div>
-        <dir class="butons">
-          <button id="play">play</button>
-          <button id="coment">coment</button>
-          <button id="config">config</button>
-          <div class="timer-container">
-            <div class="timer-display">00:00:00</div>
+  <div class="principal">
+    <div class="board">
+      <div class="pendente">
+        <h3>Pendente</h3>
+        <div class="card">
+          <div class="atividade-main">
+            <div class="atividade">atividade</div>
+            <div class="content" contenteditable="true">123</div>
+            <div class="img" img src="">001</div>
+            <div class="butons">
+              <button id="play">play</button>
+              <button id="coment">coment</button>
+              <button id="config">config</button>
+              <div class="timer-container">
+                <div class="timer-display">00:00:00</div>
+              </div>
+            </div>
           </div>
-        </dir>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="atividade">atividade</div>
-    <div class="content" contenteditable="true">123</div>
-    <div class="img" img src="">001</div>
-    <dir class="butons">
-      <button id="play">play</button>
-      <button id="coment">coment</button>
-      <button id="config">config</button>
-      <div class="timer-container">
-        <div class="timer-display">00:00:00</div>
+    <div class="board">
+      <div class="pendente">
+        <h3>Pendente</h3>
+        <div class="card">
+          <div class="atividade-main">
+            <div class="atividade">atividade</div>
+            <div class="content" contenteditable="true">123</div>
+            <div class="img" img src="">001</div>
+            <div class="butons">
+              <button id="play">play</button>
+              <button id="coment">coment</button>
+              <button id="config">config</button>
+              <div class="timer-container">
+                <div class="timer-display">00:00:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </dir>
+    </div>
+    <div class="board">
+      <div class="pendente">
+        <h3>Pendente</h3>
+        <div class="card">
+          <div class="atividade-main">
+            <div class="atividade">atividade</div>
+            <div class="content" contenteditable="true">123</div>
+            <div class="img" img src="">001</div>
+            <div class="butons">
+              <button id="play">play</button>
+              <button id="coment">coment</button>
+              <button id="config">config</button>
+              <div class="timer-container">
+                <div class="timer-display">00:00:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="board">
+      <div class="pendente">
+        <h3>Pendente</h3>
+        <div class="card">
+          <div class="atividade-main">
+            <div class="atividade">atividade</div>
+            <div class="content" contenteditable="true">123</div>
+            <div class="img" img src="">001</div>
+            <div class="butons">
+              <button id="play">play</button>
+              <button id="coment">coment</button>
+              <button id="config">config</button>
+              <div class="timer-container">
+                <div class="timer-display">00:00:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -40,23 +90,23 @@ export default {
 </script>
 
 <style scoped>
-.boards {
-  display: flex;
+.board {
   background-color: #f1f1f1;
-  flex-direction: inherit;
-  padding: 25px;
   width: 100%;
+  margin: 5px;
 }
-.body {
+.principal {
   display: flex;
   background-color: #f1f1f1;
   width: 100%;
+  margin: 5px;
 }
 
-.tarefa {
-  position: flex;
+.atividade-main {
   display: flexbox;
-  color: black;
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
 }
 
 .card {
@@ -64,8 +114,8 @@ export default {
   display: block;
   justify-content: space-around;
   flex-direction: row;
-  height: 300px;
-  weight: 350px;
+  height: 250px;
+  weight: 250px;
   background: #d4caca;
 }
 .pendente {
