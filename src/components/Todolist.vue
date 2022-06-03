@@ -1,5 +1,6 @@
 <template>
   <div calss="boards">
+    <h3>atividade</h3>
     <div class="pendente">
       <h3>Pendente</h3>
       <div class="card">
@@ -16,6 +17,19 @@
         </dir>
       </div>
     </div>
+  </div>
+  <div class="card">
+    <div class="atividade">atividade</div>
+    <div class="content" contenteditable="true">123</div>
+    <div class="img" img src="">001</div>
+    <dir class="butons">
+      <button id="play">play</button>
+      <button id="coment">coment</button>
+      <button id="config">config</button>
+      <div class="timer-container">
+        <div class="timer-display">00:00:00</div>
+      </div>
+    </dir>
   </div>
 </template>
 
@@ -34,6 +48,7 @@ export default {
   width: 100%;
 }
 .body {
+  display: flex;
   background-color: #f1f1f1;
   width: 100%;
 }
