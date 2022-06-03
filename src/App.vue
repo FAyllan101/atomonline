@@ -1,20 +1,20 @@
 <template>
-  <AtivForm />
+  <!-- <AtivForm />  -->
   <Todolist />
-  <Atividades />
+  <!-- <Atividades /> -->
 </template>
 
 <script>
-// import AtivForm from '../src/components/AtivForm.vue'
+// import AtivForm from '../src/components/AtivForm.vue';
 import Todolist from "../src/components/Todolist.vue";
-import Atividades from "../src/components/Atividades.vue";
+// import Atividades from "../src/components/Atividades.vue";
 
 export default {
   name: "App",
   components: {
     // AtivForm,
     Todolist,
-    Atividades,
+    // Atividades,
   },
 };
 </script>

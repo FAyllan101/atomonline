@@ -69,18 +69,18 @@ export default {
             msg:null
         }
     },
-     methods: {
-         async getActivities(){
+    //  methods: {
+    //      async getActivities(){
             
-            const req = await fetch("http://localhost:3000/Activities");
-            const data = await req.json();
+    //         // const req = await fetch("http://localhost:3000/Activities");
+    //         const data = await req.json();
 
-            console.log(data);
-        }
-    },
-    mounted(){
-        this.getActivities()
-    }
+    //         console.log(data);
+    //     }
+    // },
+    // mounted(){
+    //     this.getActivities()
+    // }
 }
 
 </script>
