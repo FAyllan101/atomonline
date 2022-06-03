@@ -8,10 +8,32 @@
             <div class="atividade">atividade</div>
             <div class="content" contenteditable="true">123</div>
             <div class="img" img src="">001</div>
+              <div class="button-container">
+                <div class="butons">
+                <img src="" id="play">
+                <img src="" id="coment">
+                <img src="" id="options">
+                  <div class="timer-container">
+                    <div class="timer-display">00:00:00</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="board">
+      <div class="execucao">
+        <h3>Em execução</h3>
+        <div class="card">
+          <div class="atividade-main">
+            <div class="atividade">atividade</div>
+            <div class="content" contenteditable="true">123</div>
+            <div class="img" img src="">001</div>
             <div class="butons">
-              <button id="play">play</button>
-              <button id="coment">coment</button>
-              <button id="config">config</button>
+              <img src="" id="play">
+              <img src="" id="coment">
+              <img src="" id="options">
               <div class="timer-container">
                 <div class="timer-display">00:00:00</div>
               </div>
@@ -21,17 +43,17 @@
       </div>
     </div>
     <div class="board">
-      <div class="pendente">
-        <h3>Pendente</h3>
+      <div class="atrasadas">
+        <h3>Atradadas</h3>
         <div class="card">
           <div class="atividade-main">
             <div class="atividade">atividade</div>
             <div class="content" contenteditable="true">123</div>
             <div class="img" img src="">001</div>
             <div class="butons">
-              <button id="play">play</button>
-              <button id="coment">coment</button>
-              <button id="config">config</button>
+              <img src="" id="play">
+              <img src="" id="coment">
+              <img src="" id="options">
               <div class="timer-container">
                 <div class="timer-display">00:00:00</div>
               </div>
@@ -41,37 +63,17 @@
       </div>
     </div>
     <div class="board">
-      <div class="pendente">
-        <h3>Pendente</h3>
+      <div class="concluidas">
+        <h3>Concluidas</h3>
         <div class="card">
           <div class="atividade-main">
             <div class="atividade">atividade</div>
             <div class="content" contenteditable="true">123</div>
             <div class="img" img src="">001</div>
             <div class="butons">
-              <button id="play">play</button>
-              <button id="coment">coment</button>
-              <button id="config">config</button>
-              <div class="timer-container">
-                <div class="timer-display">00:00:00</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="board">
-      <div class="pendente">
-        <h3>Pendente</h3>
-        <div class="card">
-          <div class="atividade-main">
-            <div class="atividade">atividade</div>
-            <div class="content" contenteditable="true">123</div>
-            <div class="img" img src="">001</div>
-            <div class="butons">
-              <button id="play">play</button>
-              <button id="coment">coment</button>
-              <button id="config">config</button>
+              <img src="" id="play">
+              <img src="" id="coment">
+              <img src="" id="options">
               <div class="timer-container">
                 <div class="timer-display">00:00:00</div>
               </div>
@@ -162,6 +164,8 @@ export default {
   display: flex;
 }
 
-.descricao {
+.timer-display {
+  position:flex;
+
 }
 </style>
