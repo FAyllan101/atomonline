@@ -66,6 +66,7 @@ export default {
             msg:null
         }
     },
+<<<<<<< HEAD
     methods: {
      async getActivities(){
             const req = await fetch("http://localhost:3000/Activities");
@@ -104,6 +105,20 @@ export default {
     mounted(){
      this.getActivities()
    }
+=======
+    //  methods: {
+    //      async getActivities(){
+            
+    //         // const req = await fetch("http://localhost:3000/Activities");
+    //         const data = await req.json();
+
+    //         console.log(data);
+    //     }
+    // },
+    // mounted(){
+    //     this.getActivities()
+    // }
+>>>>>>> 2d82f1ed703363d25ca3fe7649553a64475d6206
 }
 
 </script>
