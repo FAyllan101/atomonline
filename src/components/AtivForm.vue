@@ -1,54 +1,52 @@
 <template>
     <div>
-        <!-- formulário,arrumar para separar os componentes depois -->
-        <form id="ativi-form"></form>
-       <p>NOVA ATIVIDADE</p>
-       <div>
-           <div class="input-container">
-             <label for="nome">Nome da Atividade:</label>  
-             <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o nome da atividade">
-           </div>
+        <div><!-- formulário,arrumar para separar os compo        <div>nentes depois -->
+            <form id="ativi-form" @submit="createTarefa">
             <div class="input-container">
-             <label for="atribuir">Atribuir a:</label>
-                <select name="colaborador" id="colaborador" v-model="colaborador">
-                <option value=""></option>
-                    <option value="Ayllan">Ayllan Alves</option>
-                    <option value="Daniel">Daniel</option>
-                    <option value="Romério">Romério</option>
-                </select>
-           </div>
-           <div class="input-container">
-             <label for="type">Tipo de atividade :</label>
-                <select name="tipo" id="tipo" v-model="tipo">
-                    <option value="fixa">Fixa </option>
-                    <option value="temporaria">Temporária</option>
-                </select>
-           </div>
+                <label for="nome">Nome da Atividade:</label>  
+                <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o nome da atividade">
+            </div>
+                <div class="input-container">
+                <label for="atribuir">Atribuir a:</label>
+                    <select name="colaborador" id="colaborador" v-model="colaborador">
+                    <option v-for="colaborador in colaboradores" :key="colaborador.id" :value="colaboradores.tipo">
+                        {{colaboradores.tipo}}
+                    </option>
+                    </select>
+            </div>
             <div class="input-container">
-             <label for="priority">Nível de prioridade:</label>
-                <select name="prioridade" id="prioridade" v-model="prioridade">
-                    <option value="nivel1">Nível 1</option>
-                    <option value="nivel2">Nível 2</option>
-                    <option value="nivel3">Nível 3</option>
-                    <option value="nivel4">Nível 4</option>
-                </select>
-           </div>
-           <div class="input-container">
-             <label for="inicio">Inicio em:</label>  
-             <input type="text" id="inicio" name="inicio" v-model="inicio" placeholder="Data de início">
-           </div>
-            <div class="input-container">
-             <label for="final">Finaliza em:</label>  
-             <input type="text" id="final" name="final" v-model="final" placeholder="Data de finalização">
-           </div>
-            <div class="input-container">
-             <label for="descricao">Descrição:</label>  
-             <input type="text" id="descricao-box" name="descricao" v-model="descricao" placeholder="Descrição">
-           </div>
-           <div class="input-container">
-               <input type="submit" class="submit-btn" value="Enviar atividade">
-           </div>
-       </div>
+                <label for="type">Tipo de atividade :</label>
+                    <select name="tipo" id="tipo" v-model="tipo">
+                        <option v-for="tipo in tipos" :key="tipo.id" value="tipos.tipo">
+                        {{tipos.tipo}}
+                        </option>
+                    </select>
+            </div>
+                <div class="input-container">
+                <label for="priority">Nível de prioridade:</label>
+                    <select name="prioridade" id="prioridade" v-model="prioridade">
+                        <option v-for="prioridade in prioridades" :key="prioridade.id" :value="prioridades.tipo">
+                        {{prioridades.tipo}}
+                        </option>
+                    </select>
+                </div>
+                <div class="input-container">
+                <label for="inicio">Inicio em:</label>  
+                <input type="text" id="inicio" name="inicio" v-model="inicio" placeholder="Data de início">
+                </div>
+                <div class="input-container">
+                <label for="final">Finaliza em:</label>  
+                <input type="text" id="final" name="final" v-model="final" placeholder="Data de finalização">
+                </div>
+                <div class="input-container">
+                <label for="descricao">Descrição:</label>  
+                <input type="text" id="descricao-box" name="descricao" v-model="descricao" placeholder="Descrição">
+                </div>
+                <div class="input-container">
+                <input type="submit" class="submit-btn" value="Enviar atividade">
+                </div>
+            </form>
+        </div>
     </div>
 </template>
 
@@ -65,22 +63,47 @@ export default {
             inicio:null,
             final:null,
             descricao:null,
-            status:"Em aberto",
             msg:null
         }
     },
-     methods: {
-         async getActivities(){
-            
+    methods: {
+     async getActivities(){
             const req = await fetch("http://localhost:3000/Activities");
             const data = await req.json();
 
-            console.log(data);
+            this.tipos= data.tipos;
+            this.colaboradores = data.colaboradores;
+            this.prioridades = data.prioridades;
+        },
+        async createTarefa(e){
+            
+            e.preventDefault();
+
+            const data = { 
+                colaboradores: this.colaboradores,
+                tipos: this.tipos,
+                prioridades: this.prioridades,
+                status:"Em aberto"
+            }
+           
+           const dataJson = JSON.stringify(data);
+
+           const req = await fetch("http://localhost:3000/tarefas", {
+               method: "POST",
+               headers:{"Content-Type":"application/json"},
+               body:dataJson
+           });
+           
+        //    const res = await req.json();
+           this.colaboradores="";
+           this.tipos="";
+           this.prioridades="";
+
         }
     },
     mounted(){
-        this.getActivities()
-    }
+     this.getActivities()
+   }
 }
 
 </script>
